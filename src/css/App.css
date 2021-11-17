@@ -1,0 +1,112 @@
+.cards-view_module {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cards-view_list {
+    display: block;
+}
+
+.Listing {
+    width: 80%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 930px;
+}
+
+
+.ShopCard {
+    padding: 10px;
+    width: 32%;
+    min-width: 300px;
+}
+
+.card-header {
+    text-align: center;
+    border-bottom: none;
+    background: none;
+}
+
+.card-price {
+    font-size: 22px;
+    color: red;
+}
+
+.card-add-button {
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+.card-footer {
+    text-align: left;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-img {
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+}
+
+.level-low {
+    background-color: red;
+}
+
+.level-medium {
+    background-color: aquamarine;
+}
+
+.level-high {
+    background-color: greenyellow;
+}
+/* view-module */
+
+.cards-view_module .ShopCard {
+    width: 32%;
+}
+
+.cards-view_list .ShopCard {
+    background-color: rgba(0, 0, 0, .03);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards-view_list .ShopCard:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.cards-view_list .card-title {
+    margin: 0;
+}
+
+.cards-view_list .card-color {
+    margin-left: 10px;
+    font-size: 26px;
+}
+
+.cards-view_list .card-header {
+    display: flex;
+    align-items: center;
+    order: 2;
+}
+
+.cards-view_list .card-img {
+    order: 1;
+    align-self: stretch;
+    width: 85px;
+}
+
+.cards-view_list .card-footer {
+    width: 30%;
+    order: 3;
+}
+
