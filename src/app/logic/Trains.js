@@ -50,37 +50,3 @@ class Trains {
 
 const trainsObj = new Trains(init);
 export default trainsObj;
-
-// const trainsObj = (initTrains) => ({
-//     trains: initTrains,
-
-//     getTrains() {
-//         return [...this.trains];
-//     },
-
-//     addTrain(train) {
-//         this.trains.push(train);
-//     },
-
-//     returnState(train) {
-//         if (train) {
-//             this.addTrain(train);
-//         }
-//         return this.getTrains();
-//     },
-
-//     findTrainIndex(id) {
-//         return this.trains.findIndex((train) => train.id === id);
-//     },
-
-//     removeTrain(id) {
-//         const deleteIndex = this.findTrainIndex(id);
-//         this.trains.splice(deleteIndex, 1);
-//     },
-
-//     log() {
-//         console.log(this.trains);
-//     },
-// });
-
-// export default trainsObj;

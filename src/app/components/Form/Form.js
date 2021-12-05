@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-restricted-syntax */
 import styled from 'styled-components';
-import React, { useState } from 'react';
+import React from 'react';
 import { nanoid } from 'nanoid';
 
 import FormButton from './FormElement/FormButton';
