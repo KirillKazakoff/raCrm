@@ -66,6 +66,7 @@
 .level-high {
     background-color: greenyellow;
 }
+
 /* view-module */
 
 .cards-view_module .ShopCard {
@@ -110,3 +111,6 @@
     order: 3;
 }
 
+table {
+    margin-bottom: 50px;
+}

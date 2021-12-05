@@ -42,10 +42,6 @@ class Trains {
     checkSame(checkable) {
         return this.trains.findIndex((train) => train.date === checkable.date);
     }
-
-    log() {
-        console.log(this.trains);
-    }
 }
 
 const trainsObj = new Trains(init);

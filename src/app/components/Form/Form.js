@@ -13,12 +13,23 @@ const StyledForm = styled.form`
     column-gap: 10px;
 `;
 
+const dataRegExp = /^(0[1-9]|[12][0-9]|3[01])[- /.]/;
+
 export default function Form({ submitH, columns }) {
     const onSubmit = (e) => {
         const { target } = e;
         e.preventDefault();
 
         const inputs = [...target.elements].filter((elem) => elem.tagName === 'INPUT');
+        if (!dataRegExp.test(inputs[0].value)) {
+            submitH('date input error', 'error');
+            return;
+        }
+
+        if (Number.isNaN(parseFloat(inputs[1].value))) {
+            submitH('distance input error', 'error');
+            return;
+        }
 
         const train = inputs.reduce((total, element) => {
             const inputName = element.name;
@@ -40,10 +51,7 @@ export default function Form({ submitH, columns }) {
     ));
 
     return (
-        <StyledForm
-            onSubmit={(e) => onSubmit(e)}
-            onClick={() => console.log('hello')}
-        >
+        <StyledForm onSubmit={(e) => onSubmit(e)}>
             {inputs}
             <FormButton content='Ok' />
         </StyledForm>

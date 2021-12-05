@@ -5,6 +5,7 @@ import Form from './components/Form/Form';
 import Table from './components/Table/Table';
 import columns from './columns';
 import trainsObj from './logic/Trains';
+import Error from './components/Error';
 
 const StyledApp = styled.div`
     padding: 30px;
@@ -14,8 +15,8 @@ const StyledApp = styled.div`
 `;
 
 export default function App() {
-    trainsObj.log();
     const [trains, setTrains] = useState(trainsObj.trains);
+    const [error, setError] = useState(false);
 
     const submitH = (adjusted, operation) => {
         if (operation === 'submit') {
@@ -30,6 +31,12 @@ export default function App() {
 
             setTrains(newTrains);
         }
+
+        if (operation === 'error') {
+            setError(adjusted);
+        } else {
+            setError(false);
+        }
     };
 
     return (
@@ -43,6 +50,7 @@ export default function App() {
                 trains={trains}
                 columns={columns}
             />
+            <Error error={error} />
         </StyledApp>
     );
 }
